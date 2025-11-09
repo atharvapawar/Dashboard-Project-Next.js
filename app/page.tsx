@@ -12,7 +12,7 @@ export default function Home() {
           Manage Your tasks, track analytics, and stay orangized with our
           powerful dashboard.
         </p>
-
+      
         <Link
           href="/dashboard"
           className="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
