@@ -3,7 +3,7 @@ import React from "react";
 
 const Dashboard = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-8">
+<div className="min-h-screen bg-gradient-to-br from-purple-500 via-indigo-500 to-blue-600  p-8">
       <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg p-8 space-y-8">
         {/* Header */}
         <div className="flex flex-col">

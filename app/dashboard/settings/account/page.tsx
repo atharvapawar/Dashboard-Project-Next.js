@@ -1,42 +1,48 @@
 import React from "react";
 
-const page = () => {
+const Page = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-red-50 p-10">
-      <div className="max-w-5xl mx-auto bg-white rounded-lg shadow-2xl p-10">
-        <h1 className="text-4xl font-extrabold text-gray-900 mb-6">
-          Account Settings
+    <div className="min-h-screen bg-gradient-to-br from-indigo-300 via-blue-500 to-purple-300 p-10 flex items-center justify-center">
+      <div className="max-w-5xl w-full bg-white/90 backdrop-blur-lg rounded-2xl shadow-2xl p-10 border border-white/30">
+        <h1 className="text-4xl font-extrabold text-gray-900 mb-8 tracking-tight">
+          ⚙️ Account Settings
         </h1>
 
-        <form className="space-y-10">
+        <form className="space-y-12">
           {/* Profile Information */}
           <section>
-            <p className="text-gray-700 text-lg font-medium mb-6">
-              Profile Information
+            <p className="text-gray-800 text-xl font-semibold mb-6 border-b pb-2">
+              👤 Profile Information
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="space-y-2">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-semibold text-gray-700"
+                >
                   Full Name
                 </label>
                 <input
                   type="text"
                   id="name"
                   placeholder="John Doe"
-                  className="w-full border-2 border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+                  className="w-full border border-gray-300 rounded-lg py-3 px-4 text-gray-700 shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all"
                 />
               </div>
 
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+              <div className="space-y-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-semibold text-gray-700"
+                >
                   Email Address
                 </label>
                 <input
                   type="email"
                   id="email"
                   placeholder="johndoe@example.com"
-                  className="w-full border-2 border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+                  className="w-full border border-gray-300 rounded-lg py-3 px-4 text-gray-700 shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all"
                 />
               </div>
             </div>
@@ -44,46 +50,55 @@ const page = () => {
 
           {/* Security */}
           <section>
-            <p className="text-gray-700 text-lg font-medium mb-6">Security</p>
+            <p className="text-gray-800 text-xl font-semibold mb-6 border-b pb-2">
+              🔒 Security
+            </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="space-y-2">
+                <label
+                  htmlFor="password"
+                  className="block text-sm font-semibold text-gray-700"
+                >
                   New Password
                 </label>
                 <input
                   type="password"
                   id="password"
                   placeholder="Enter new password"
-                  className="w-full border-2 border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+                  className="w-full border border-gray-300 rounded-lg py-3 px-4 text-gray-700 shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all"
                 />
               </div>
 
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+              <div className="space-y-2">
+                <label
+                  htmlFor="confirm-password"
+                  className="block text-sm font-semibold text-gray-700"
+                >
                   Confirm Password
                 </label>
                 <input
                   type="password"
                   id="confirm-password"
                   placeholder="Re-enter new password"
-                  className="w-full border-2 border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+                  className="w-full border border-gray-300 rounded-lg py-3 px-4 text-gray-700 shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all"
                 />
               </div>
             </div>
           </section>
 
-          <div className="flex justify-end space-x-4 pt-6 ">
+          {/* Action Buttons */}
+          <div className="flex justify-end space-x-4 pt-8 border-t">
             <button
               type="button"
-              className="px-6 py-2 text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-400 transition-colors"
+              className="px-6 py-2.5 text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-400 transition-all shadow-sm"
             >
               Cancel
             </button>
 
             <button
               type="submit"
-              className="px-6 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-colors"
+              className="px-6 py-2.5 text-white bg-gradient-to-br from-indigo-600 to-blue-500 rounded-lg hover:from-indigo-700 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all shadow-md hover:shadow-lg"
             >
               Save Changes
             </button>
@@ -94,4 +109,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
